@@ -38,7 +38,7 @@
 
 \section{Introduction and Motivation}
 
-Personnel scheduling is central to retail, hospitality, healthcare, and other service settings where demand changes over time and employees differ in skills, contracts, and preferences. Although the field has been studied extensively in operations research, real-world adoption remains limited because classical models often capture feasibility and cost more effectively than tacit human preferences or operational nuance \cite{ernst2004,vandenbergh2013,petrovic2017}. This abridged review examines 17 papers from 2004 to 2025. Anchored on Xue et al.\ (2025), it positions flexible, multi-skilled, learning-enhanced scheduling as a response to that adoption gap \cite{xue2025}. The field now moves beyond feasibility and cost, yet still struggles to encode managerial preferences without losing tractability.
+Personnel scheduling is central to retail, hospitality, healthcare, and other service settings where demand varies and employees differ in skills, contracts, and preferences. Although the field has been studied extensively in operations research, real-world adoption remains limited because classical models capture feasibility and cost more effectively than tacit human preferences and local operational nuance \cite{ernst2004,vandenbergh2013,petrovic2017}. This abridged review examines 17 papers from 2004 to 2025. Using recent survey papers to frame the field and Xue et al.\ (2025) to anchor its frontier, it examines how flexible, multi-skilled, learning-enhanced scheduling responds to that adoption gap \cite{xue2025}.
 
 \begin{figure}[H]
 \centering
@@ -55,7 +55,7 @@ Four challenges dominate. First, \textit{scalability} worsens when flexible shif
 
 \subsection{Search Strategy}
 
-The search began with Xue et al.\ (2025) as the seed paper. Related work was expanded through ConnectedPapers, backward citation chasing, and searches in ScienceDirect, SpringerLink, IEEE Xplore, and Google Scholar. Core keywords included ``personnel scheduling'', ``staff rostering'', ``flexible shift scheduling'', ``multi-skilled workforce scheduling'', ``shift design'', ``shift assignment'', ``preference-aware scheduling'', and ``learning-enhanced optimisation''. The final set was narrowed to papers directly relevant to flexible shifts, workforce heterogeneity, implementation, or machine-learning-assisted optimisation.
+The search started from recent survey papers by Van den Bergh et al.\ (2013), De Bruecker et al.\ (2015), and Defraeye and Van Nieuwenhuyse (2016), then used Xue et al.\ (2025) as a frontier anchor in ConnectedPapers and backward citation chasing. Additional papers were located through ScienceDirect, SpringerLink, IEEE Xplore, and Google Scholar. Keywords included ``personnel scheduling'', ``staff rostering'', ``flexible shifts'', ``multi-skilled workforce scheduling'', and ``preference-aware'' or ``learning-enhanced'' optimisation. The final set retained papers directly relevant to flexibility, heterogeneity, implementation, or data-assisted optimisation.
 
 \begin{figure}[H]
 \centering
@@ -122,57 +122,57 @@ D. Evolutionary and learning-enhanced methods & Evolutionary baselines, matheuri
 
 \subsection{Category A: Surveys and Field Framing}
 
-\textbf{Ernst et al.\ (2004).} This foundational review synthesises applications, models, and solution methods across staff scheduling and rostering. It does not propose a new algorithm; instead, it clarifies how objectives and constraints vary by application domain. That broad framing still anchors contemporary scheduling research \cite{ernst2004}.
+\textbf{Ernst et al.\ (2004).} This foundational review synthesises applications, models, and solution methods across staff scheduling domains. Its evidence is comparative synthesis rather than experimentation, but it remains a baseline map of objectives and constraints \cite{ernst2004}.
 
-\textbf{Van den Bergh et al.\ (2013).} This review classifies personnel scheduling literature from multiple perspectives, including problem setting and technical features. Its table-based structure is especially useful for identifying research trends and neglected combinations of characteristics. It therefore serves as a practical survey seed for the present review \cite{vandenbergh2013}.
+\textbf{Van den Bergh et al.\ (2013).} This review classifies personnel scheduling literature by problem setting and technical features through a structured survey. The resulting taxonomy is useful evidence of which feature combinations have been explored and which remain sparse \cite{vandenbergh2013}.
 
-\textbf{De Bruecker et al.\ (2015).} This state-of-the-art review focuses on workforce planning with skill considerations. By moving beyond single-skill staffing, it helps explain why multi-skilled personnel scheduling cannot be treated as a minor extension of standard rostering. The paper broadens the conceptual basis for skill-aware scheduling \cite{debruecker2015}.
+\textbf{De Bruecker et al.\ (2015).} This state-of-the-art review focuses on workforce planning with skill considerations. Its synthesis shows that multi-skilled planning changes feasible assignment structure rather than adding a minor side constraint \cite{debruecker2015}.
 
-\textbf{Defraeye and Van Nieuwenhuyse (2016).} This literature review examines staffing and scheduling under nonstationary demand in service systems. Its main relevance is to show that fluctuating demand is not a peripheral complication but a central modelling driver. That insight links classical service operations research to flexible workforce scheduling \cite{defraeye2016}.
+\textbf{Defraeye and Van Nieuwenhuyse (2016).} This literature review examines staffing and scheduling under nonstationary demand in service systems. The survey evidence shows that fluctuating demand is a central modelling driver rather than a peripheral complication \cite{defraeye2016}.
 
-These surveys map the problem space well, but they do not explain how preferences or deployment realities should enter operational models.
+These surveys map the field well, but they say less about how preferences and deployment realities enter operational models.
 
 \subsection{Category B: Preference and Implementation}
 
-\textbf{Gordon and Erkut (2004).} Gordon and Erkut describe a spreadsheet-based decision-support tool for volunteer scheduling at the Edmonton Folk Festival. The work is important because it addresses implementation, user preferences, and usable schedule outputs rather than only optimisation quality. It shows how adoption concerns can dominate model choice in practice \cite{gordon2004}.
+\textbf{Gordon and Erkut (2004).} Gordon and Erkut present a spreadsheet decision-support tool for volunteer scheduling at the Edmonton Folk Festival. The evidence is a real implementation case showing that usability and preference handling can matter more than marginal optimisation gains \cite{gordon2004}.
 
-\textbf{Topaloglu and Ozkarahan (2004).} This paper presents an implicit goal programming model for tour scheduling that incorporates employee work preferences and scheduling flexibility. The integrated formulation generates work schedules without a separate downstream assignment step. It is an early example of preference-aware scheduling as a primary modelling objective \cite{topaloglu2004}.
+\textbf{Topaloglu and Ozkarahan (2004).} This paper formulates tour scheduling as implicit goal programming with employee preferences. Computational results show that integrated preference handling can generate feasible schedules without a separate assignment stage \cite{topaloglu2004}.
 
-\textbf{Henao et al.\ (2015).} Henao et al.\ study multi-skilling in a retail service case through a mixed-integer model for training and assignment decisions over a weekly horizon. Their results suggest that selective, not universal, multi-skilling can improve schedule efficiency. The paper is especially relevant because it ties personnel flexibility to a concrete retail setting \cite{henao2015}.
+\textbf{Henao et al.\ (2015).} Henao et al.\ study multi-skilling in a retail case through a mixed-integer model for training and assignment decisions. Case results suggest that selective, rather than universal, multi-skilling improves schedule efficiency \cite{henao2015}.
 
-\textbf{Petrovic (2017).} Petrovic offers a critical reflection on why personnel scheduling research still has limited practical uptake. By classifying existing software and discussing what schedulers actually need, the paper reframes implementation as a research problem in its own right. It is central for understanding the gap between theoretical optimisation and deployed systems \cite{petrovic2017}.
+\textbf{Petrovic (2017).} Petrovic analyses why personnel scheduling research still has limited uptake in practice. The evidence comes from software classification and implementation experience, showing that deployment needs differ from standard benchmark objectives \cite{petrovic2017}.
 
-These studies confront adoption more directly, but most still rely on conventional optimisation rather than learned representations of human judgement.
+Compared with survey papers, these studies provide stronger practice evidence, but mostly through isolated case settings rather than transferable validation.
 
 \subsection{Category C: Shift Design and Decomposition}
 
-\textbf{Di Gaspero et al.\ (2007).} This paper studies the minimum shift design problem and connects it to a network-flow formulation. It proposes a hybrid heuristic combining greedy construction with local search, and experiments show clear gains over an earlier implementation. The paper is valuable because it isolates shift design as a standalone analytical task \cite{digaspero2007}.
+\textbf{Di Gaspero et al.\ (2007).} This paper studies the minimum shift design problem using network-flow structure plus greedy construction and local search. Computational comparisons against an earlier implementation show clear quality gains \cite{digaspero2007}.
 
-\textbf{Hojati and Patil (2011).} Hojati and Patil address the scheduling of heterogeneous, part-time service employees using an integer linear programming-based heuristic. The paper is relevant because it models precisely the kind of mixed-skill and part-time labour structure that later flexible workforce studies inherit. It therefore bridges service scheduling and heterogeneous workforce assignment \cite{hojati2011}.
+\textbf{Hojati and Patil (2011).} Hojati and Patil schedule heterogeneous part-time service employees with an integer linear programming-based heuristic. Their experiments show why mixed contracts and skills materially change the assignment problem \cite{hojati2011}.
 
-\textbf{Parisio and Jones (2015).} Parisio and Jones formulate employee scheduling in retail outlets as a two-stage stochastic programming problem with uncertain demand. Their contribution is to embed demand uncertainty directly into workforce planning rather than treating it as an afterthought. This makes the paper important for real-world retail settings with volatile service loads \cite{parisio2015}.
+\textbf{Parisio and Jones (2015).} Parisio and Jones model retail employee scheduling as two-stage stochastic programming under uncertain demand. Scenario-based results show that uncertainty changes staffing decisions rather than merely adding robustness penalties \cite{parisio2015}.
 
-\textbf{Prot et al.\ (2015).} Prot et al.\ propose a two-phase method for the shift design and personnel task scheduling problem with an equity objective. By iterating between design and assignment, the paper shows that decomposed methods can remain coordinated rather than naively sequential. Its structure closely foreshadows the two-stage logic used in later flexible scheduling research \cite{prot2015}.
+\textbf{Prot et al.\ (2015).} Prot et al.\ propose a two-phase method for shift design and personnel task scheduling with an equity objective. Computational evaluation shows that iterative coordination between design and assignment can preserve fairness without collapsing into a naive sequential workflow \cite{prot2015}.
 
-Category C increases realism through decomposition and uncertainty handling, but usually at the cost of globally integrated optimisation.
+Category C improves realism through decomposition and uncertainty handling, but usually sacrifices global integration.
 
 \subsection{Category D: Evolutionary and Learning-Enhanced Methods}
 
-\textbf{Aickelin and Dowsland (2004).} This paper develops an indirect genetic algorithm for nurse scheduling using permutation encoding and a heuristic decoder. Computational experiments on live hospital data show that the approach is flexible, fast, and competitive with tabu search. It remains a useful baseline for later evolutionary scheduling work \cite{aickelin2004}.
+\textbf{Aickelin and Dowsland (2004).} This paper develops an indirect genetic algorithm for nurse scheduling using permutation encoding and a heuristic decoder. Experiments on live hospital data show competitive performance against tabu search and establish a durable evolutionary baseline \cite{aickelin2004}.
 
-\textbf{Bai et al.\ (2010).} Bai et al.\ improve nurse rostering by hybridising stochastic-ranking genetic search with a simulated-annealing hyper-heuristic. Their experiments show better feasible and high-quality solutions than earlier evolutionary baselines. The paper is significant because it demonstrates how hybrid search can outperform single-technique metaheuristics \cite{bai2010}.
+\textbf{Bai et al.\ (2010).} Bai et al.\ combine stochastic-ranking genetic search with a simulated-annealing hyper-heuristic for nurse rostering. Comparative experiments show better feasible and high-quality solutions than earlier evolutionary baselines \cite{bai2010}.
 
-\textbf{\c{C}ak{\i}rgil et al.\ (2020).} This study examines multi-objective, multi-skill workforce scheduling and routing for field service operations. It combines a mixed-integer model with a two-stage matheuristic and validates the approach on real-life and literature instances. The paper expands the review beyond rostering to richer service operations with team formation and routing \cite{cakirgil2020}.
+\textbf{\c{C}ak{\i}rgil et al.\ (2020).} This study examines multi-objective, multi-skill workforce scheduling and routing for field service operations. Validation on real-life and literature instances shows that a two-stage matheuristic scales to richer service settings than classical rostering models \cite{cakirgil2020}.
 
-\textbf{Sun et al.\ (2022).} Sun et al.\ propose ML-ACO, where a learned predictor estimates promising solution components before ant colony optimisation constructs routes. The paper is not about personnel scheduling directly, but it offers a transferable template for integrating supervised learning into metaheuristic search. It therefore supports the broader move toward learning-enhanced optimisation \cite{sun2022}.
+\textbf{Sun et al.\ (2022).} Sun et al.\ propose ML-ACO, in which a learned predictor biases ant colony optimisation toward promising solution components. Comparative experiments show that learned guidance can strengthen metaheuristic search, although the evidence comes from generic rather than personnel-scheduling instances \cite{sun2022}.
 
-\textbf{Xue et al.\ (2025).} Xue et al.\ address real-world personnel scheduling with flexible shifts and multi-skilled part-time workers through a machine-learning-enhanced memetic algorithm. A decision tree learns appealing historical shift patterns, while a two-phase framework separates shift design from assignment. This paper is the anchor study because it directly combines practical realism, preference learning, and advanced search \cite{xue2025}.
+\textbf{Xue et al.\ (2025).} Xue et al.\ address flexible-shift scheduling for multi-skilled part-time staff with a learning-enhanced memetic algorithm. Real-world experiments show that decision-tree learning over historical shift patterns can improve search guidance in practice-oriented scheduling \cite{xue2025}.
 
-Category D strengthens search performance, yet most methods still depend on handcrafted encodings; Xue et al.\ (2025) is distinctive in learning from historical scheduling patterns.
+Category D offers the strongest computational evidence, but most methods still rely on handcrafted encodings and benchmark-style evaluation rather than deployment studies.
 
 \section{Discussion}
 
-A key insight from the reviewed literature is that the main bottleneck is no longer pure computational optimisation but model realism. Early work emphasised how to solve difficult schedules, whereas recent studies argue that deployment fails when models omit tacit preferences, flexibility, or contextual constraints \cite{petrovic2017,xue2025}. There is therefore a clear tension between realism and tractability: flexible shifts, heterogeneous skills, and uncertain demand improve fidelity, but they also push researchers toward decomposition, heuristics, or matheuristics \cite{digaspero2007,parisio2015,prot2015}. The SurVis visualisation in Figure~\ref{fig:survis} reinforces this pattern by showing that only a small frontier of papers lies at the overlap of the learning and multi-skilled themes, while implementation-oriented studies remain concentrated outside that frontier. No reviewed study fully integrates flexible shift design, multi-skilled workforce modelling, data-driven preference learning, and real-world deployment validation in one tested framework. Public benchmarks remain limited, and learned components are rarely evaluated for transferability or bias. Figure~\ref{fig:framework} summarises this review's synthesis of the field.
+A key insight from the reviewed literature is that the main bottleneck is no longer pure computational optimisation but model realism. Early work emphasised how to solve difficult schedules, whereas recent studies argue that deployment fails when models omit tacit preferences, flexibility, or contextual constraints \cite{petrovic2017,xue2025}. There is therefore a clear tension between realism and tractability: flexible shifts, heterogeneous skills, and uncertain demand improve fidelity, but they also push researchers toward decomposition, heuristics, or matheuristics \cite{digaspero2007,parisio2015,prot2015}. Evidence strength also varies across categories: survey papers synthesise broad literatures, implementation papers often rely on single organisational cases, and learning-enhanced papers usually report computational comparisons rather than long-horizon field deployment. The SurVis visualisation in Figure~\ref{fig:survis} reinforces this pattern by showing that only a small frontier of papers lies at the overlap of the learning and multi-skilled themes, while implementation-oriented studies remain concentrated outside that frontier. No reviewed study fully integrates flexible shift design, multi-skilled workforce modelling, data-driven preference learning, and real-world deployment validation in one tested framework. Public benchmarks remain limited, and learned components are rarely evaluated for transferability or bias. Figure~\ref{fig:framework} summarises this review's synthesis of the field.
 
 \begin{figure}[H]
 \centering
@@ -183,7 +183,7 @@ A key insight from the reviewed literature is that the main bottleneck is no lon
 
 \section{Conclusion}
 
-This review shows that personnel scheduling research is moving from generic rostering toward flexible, skill-aware decision support. Survey papers define the field, implementation papers explain adoption barriers, and newer hybrid methods point toward more realistic optimisation. A promising dissertation direction is interpretable learning-enhanced personnel scheduling under demand volatility and workforce heterogeneity.
+Personnel scheduling research is moving from generic rostering toward flexible, skill-aware decision support, but the next step is interpretable learning-enhanced models validated under real demand volatility and workforce heterogeneity.
 
 \renewcommand{\refname}{References}
 \begin{thebibliography}{99}
