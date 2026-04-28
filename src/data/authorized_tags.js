@@ -1,14 +1,14 @@
 const userDefinedAuthorizedTags = {
-	"category:A human-centered survey": {
-		"description": "Category A: recent human-centered, fatigue, implementation, and survey-framing studies"
+	"category:A human-centered and survey framing": {
+		"description": "Category A: human-centered and survey-framing studies"
 	},
-	"category:B skill demand modelling": {
+	"category:B skill-aware and demand-aware modelling": {
 		"description": "Category B: skill-aware, demand-aware, stochastic, and robust workforce modelling studies"
 	},
-	"category:C flexible retail recovery": {
+	"category:C flexible shift design and retail recovery": {
 		"description": "Category C: flexible shift design, retail mismatch, rescheduling, recovery, and preference studies"
 	},
-	"category:D data learning optimisation": {
+	"category:D data-driven and learning-guided optimisation": {
 		"description": "Category D: data-driven, robust, hybrid, and learning-guided optimisation methods"
 	},
 	"theme:human-centered": {
