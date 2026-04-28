@@ -54,7 +54,7 @@ var editable = false;
  * @type {{html: string, id: string}}
  */
 var paper = {
-    html: 'SurVis companion page for the COMP4126 Coursework 3 literature review, organised from the Burgert et al. (2024) human-centered survey seed toward the Xue et al. (2025) learning-enhanced frontier.',
+    html: 'SurVis companion page for the COMP4126 Coursework 3 literature review. The corpus now contains 20 papers from 2015 to 2025, starting from Burgert et al. (2024) and moving toward data-driven and learning-enhanced personnel scheduling.',
     id: 'xue2025'
 };
 
