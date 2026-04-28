@@ -1,6 +1,6 @@
 const userDefinedAuthorizedTags = {
-	"category:A human-centered and survey framing": {
-		"description": "Category A: human-centered and survey-framing studies"
+	"category:A human-centred and survey framing": {
+		"description": "Category A: human-centred and survey-framing studies"
 	},
 	"category:B skill-aware and demand-aware modelling": {
 		"description": "Category B: skill-aware, demand-aware, stochastic, and robust workforce modelling studies"
@@ -11,7 +11,7 @@ const userDefinedAuthorizedTags = {
 	"category:D data-driven and learning-guided optimisation": {
 		"description": "Category D: data-driven, robust, hybrid, and learning-guided optimisation methods"
 	},
-	"theme:human-centered": {
+	"theme:human-centred": {
 		"description": "papers that explicitly frame scheduling as worker-facing decision support"
 	},
 	"theme:survey": {

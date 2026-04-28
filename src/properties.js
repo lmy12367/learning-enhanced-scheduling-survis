@@ -2,7 +2,7 @@
  * Name as used as title for the main page
  * @type {string}
  */
-var title = 'Toward Human-Centered and Learning-Enhanced Personnel Scheduling for Flexible Multi-Skilled Workforces';
+var title = 'Toward Human-Centred and Learning-Enhanced Personnel Scheduling for Flexible Multi-Skilled Workforces';
 
 /**
  * Relative path to the data directory
