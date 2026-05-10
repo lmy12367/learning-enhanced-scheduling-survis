@@ -185,7 +185,7 @@
         "type": "article",
         "url": "https://doi.org/10.1007/s10479-017-2574-4",
         "volume": "275",
-        "year": "2017"
+        "year": "2019"
     },
     "porto2019": {
         "author": "Porto, Andr{\\'e}s Felipe and Henao, C{\\'e}sar Augusto and L{\\'o}pez-Ospina, H{\\'e}ctor and Gonz{\\'a}lez, Esneyder Rafael",
